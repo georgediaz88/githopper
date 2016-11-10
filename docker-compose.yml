@@ -1,0 +1,47 @@
+version: '2'
+services:
+
+  # proxy:
+  #   image: jwilder/nginx-proxy
+  #   ports:
+  #     - '80:80'
+  #   volumes:
+  #     - /var/run/docker.sock:/tmp/docker.sock
+
+  frontend:
+    build: ./frontend
+    container_name: reactnotifier_frontend
+    command: npm run start
+    ports:
+      - '8080:80'
+    volumes:
+     - ./frontend:/app
+    environment:
+      NODE_ENV: development
+    #   VIRTUAL_HOST: githopper.dev
+
+  backend:
+    build: ./backend
+    container_name: reactnotifier_backend
+    command: rails s -b 0.0.0.0 -p 3050
+    ports:
+      - '3050:3050'
+    depends_on:
+      - db
+      - frontend
+    volumes:
+      - ./backend:/app
+      - db_data:/var/lib/postgresql/data
+    environment:
+      RAILS_ENV: development
+    # environment:
+    #   VIRTUAL_HOST: api.githopper.dev
+
+  db:
+    image: postgres:9.6
+    container_name: reactnotifier_db
+    ports:
+      - '5432'
+
+volumes:
+  db_data:

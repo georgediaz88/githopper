@@ -1,0 +1,19 @@
+version: '2'
+services:
+
+  frontend:
+    image: georgediaz/reactnotifier_frontend
+    command: npm run prod
+    ports:
+      - '80'
+
+  backend:
+    image: georgediaz/reactnotifier_backend
+    command: rails s -p 3050 -e production
+    ports:
+      - '3050'
+
+  db:
+    image: postgres:9.6
+    ports:
+      - '5432'

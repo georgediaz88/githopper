@@ -1,0 +1,47 @@
+.header {
+  padding: 0.5em;
+  color: #fff;
+  text-align: center;
+}
+
+.scrum {
+  .header {
+    background-color: #34495e;
+  }
+}
+
+.two-ago {
+  .header {
+    background-color: #8e44ad;
+  }
+}
+.three-ago {
+  .header {
+    background-color: #16a085;
+  }
+}
+.four-ago {
+  .header {
+    background-color: #2980b9;
+  }
+}
+.five-ago {
+  .header {
+    background-color: #e74c3c;
+  }
+}
+.six-ago {
+  .header {
+    background-color: #e67e22;
+  }
+}
+
+.seven-ago{
+  .header{
+    background-color: #95a5a6;
+  }
+}
+.day-of-week{
+  margin-left:12px;
+  opacity: 0.65;
+}

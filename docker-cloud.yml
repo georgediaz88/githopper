@@ -1,0 +1,29 @@
+backend:
+  autoredeploy: true
+  deployment_strategy: high_availability
+  environment:
+    - "VIRTUAL_HOST='api.githopper.com'"
+  image: 'georgediaz/reactnotifier_backend:latest'
+  target_num_containers: 1
+  links:
+    - db
+db:
+  image: 'postgres:9.6'
+frontend:
+  autoredeploy: true
+  deployment_strategy: high_availability
+  environment:
+    - "VIRTUAL_HOST='www.githopper.com'"
+  image: 'georgediaz/reactnotifier_frontend:latest'
+  target_num_containers: 2
+lb:
+  image: 'dockercloud/haproxy:latest'
+  autorestart: always
+  links:
+    - backend
+    - frontend
+  ports:
+    - '80:80'
+  restart: always
+  roles:
+    - global

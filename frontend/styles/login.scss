@@ -1,0 +1,19 @@
+.login-wrapper{
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("https://s3.amazonaws.com/george-theta/images/field.jpg");
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  position: absolute;
+}
+
+.login-title{
+  font-size: 3em;
+}
+
+.login-msg{
+  font-size:1.075em;
+  margin-bottom:1.5em;
+  line-height: 1.4em;
+}

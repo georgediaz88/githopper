@@ -1,0 +1,23 @@
+body{
+  margin:auto;
+  width: 100%;
+  overflow-x: hidden;
+  background: #f1f2f3;
+}
+
+.flex-parent{
+  display: flex;
+}
+
+.flex-child{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+  opacity: .9;
+}
+
+.content{
+  margin-top: 1em;
+}

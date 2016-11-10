@@ -1,0 +1,9 @@
+my-todos.txt
+node_modules/
+backend/log/
+backend/tmp/
+frontend/public/bundle.js
+frontend/public/bundle.js.map
+frontend/.env
+githopper.dab
+notes/

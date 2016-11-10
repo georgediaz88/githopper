@@ -1,0 +1,45 @@
+.user-event {
+  padding-top: 12px;
+  border-bottom: 1px solid #e2e4e6;
+}
+
+.github-icon-container {
+  text-align: center;
+  .github-icon{
+    font-size: 2em;
+    color: gray;
+  }
+}
+
+.timestamp{
+  margin-top:8px;
+  font-size:0.8em;
+  color: #979797;
+}
+
+a.link{
+  color: #2980b9;
+  text-decoration: none;
+}
+
+.no-activity-msg{
+  opacity: 0.5;
+  text-align: center;
+  font-weight: normal;
+  padding: 44px;
+  font-size: 1.3em;
+}
+
+.message-area{
+  margin-left: -18px;
+}
+
+// tablet
+@media only screen and (min-width: 64em){
+  .user-event{
+    margin: 0 32px;
+  }
+  .message-area{
+    margin-left: -8px;
+  }
+}

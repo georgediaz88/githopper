@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  min_messages: warning
+  username: postgres
+  host: db
+
+development:
+  <<: *default
+  database: githopper_development
+
+test: &TEST
+  <<: *default
+  database: githopper_test
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  username: postgres
+  pool: 15
