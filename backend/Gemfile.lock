@@ -166,7 +166,7 @@ PLATFORMS
 DEPENDENCIES
   jwt (~> 1.5.4)
   listen (~> 3.0.5)
-  newrelic_rpm (~> 3.17.1)
+  newrelic_rpm
   octokit
   pg (~> 0.18.4)
   pry-byebug
