@@ -22,6 +22,7 @@ const Login = ({signInWithGithub}) => {
               onClick={signInWithGithub}
               primary={true}
               fullWidth={true}
+              className='gh-link'
               icon={<FaGithub/>}
             />
           </Col>

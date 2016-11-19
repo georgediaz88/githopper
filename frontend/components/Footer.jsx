@@ -11,7 +11,8 @@ class Footer extends React.Component {
     return(
       <footer className='footer'>
         <Row className='animated fadeInUp'>
-          <Col xs={8} sm={9} md={8}>
+          <Col xs={12}>
+            © 2016 George Diaz &nbsp; | &nbsp;
             <a href="http://www.twitter.com/@georgediaz23" target="_blank">
               <FaTwitter/>
             </a>
@@ -21,9 +22,6 @@ class Footer extends React.Component {
             <a href="https://medium.com/@georgediaz" target="_blank">
               <FaMedium/>
             </a>
-          </Col>
-          <Col xs={4} sm={3} mdOffset={2} md={2}>
-            © 2016 George Diaz
           </Col>
         </Row>
       </footer>
