@@ -5,13 +5,13 @@ The application is split into two apps that are brought up as one through our gr
 
 ## Frontend App
 This is a rich frontend app utilizing:
-  - React (15.1),
-  - React Router,
-  - Redux, 
-  - Firebase 3.x for Github OAuth Authentication,
-  - React Flexbox Grid,
-  - React Icons,
-  - Sass,
+  - React (15.1)
+  - React Router
+  - Redux,
+  - Firebase 3.x for Github OAuth Authentication
+  - React Flexbox Grid
+  - React Icons
+  - Sass
   - ScrollReveal
 
 ## Backend App

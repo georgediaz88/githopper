@@ -11,6 +11,7 @@ import { authActions } from '../auth/'
 import * as actions from '../actions/'
 import { bindActionCreators } from 'redux'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 class App extends React.Component {
 
@@ -36,31 +37,36 @@ class App extends React.Component {
     const { auth, children, snackbarMessage, openSnackbar, status } = this.props
 
     return (
-        <MuiThemeProvider muiTheme={getMuiTheme()}>
-          <div>
-            { auth.authenticated &&
-              <StickyContainer>
-                <Sticky style={{zIndex: 5}}>
-                  <Navbar auth={auth} signOut={this.signOut} />
-                </Sticky>
-                <div className='content'>
+      <div className='site'>
+        <div className='site-content'>
+          <MuiThemeProvider muiTheme={getMuiTheme()}>
+            <div>
+              { auth.authenticated &&
+                <StickyContainer>
+                  <Sticky style={{zIndex: 5}}>
+                    <Navbar auth={auth} signOut={this.signOut} />
+                  </Sticky>
+                  <div className='content'>
+                    { children }
+                  </div>
+                  <Snackbar
+                    open={openSnackbar}
+                    message={snackbarMessage}
+                    autoHideDuration={2000}
+                    onRequestClose={this.handleSnackbarRequestClose}
+                  />
+                </StickyContainer>
+              }
+              { !auth.authenticated &&
+                <div className='login-wrapper'>
                   { children }
                 </div>
-                <Snackbar
-                  open={openSnackbar}
-                  message={snackbarMessage}
-                  autoHideDuration={2000}
-                  onRequestClose={this.handleSnackbarRequestClose}
-                />
-              </StickyContainer>
-            }
-            { !auth.authenticated &&
-              <div className='login-wrapper'>
-                { children }
-              </div>
-            }
-          </div>
-        </MuiThemeProvider>
+              }
+            </div>
+          </MuiThemeProvider>
+        </div>
+        <Footer></Footer>
+      </div>
     )
   }
 }

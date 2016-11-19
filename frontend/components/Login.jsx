@@ -13,7 +13,7 @@ const Login = ({signInWithGithub}) => {
   return(
     <div>
       <Grid>
-        <Row className='flex-parent' center='xs'>
+        <Row className='flex-parent animated fadeInUp' center='xs'>
           <Col xs={8} sm={6} md={4} className='flex-child'>
             <div className='login-title'>Githopper</div>
             <p className='login-msg'>No more forgetting what you did yesterday. See your weekly Github activity.</p>
