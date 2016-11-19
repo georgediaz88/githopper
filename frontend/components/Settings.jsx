@@ -10,7 +10,7 @@ require('../styles/settings.scss')
 
 class Settings extends React.Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchOrganizations()
     this.props.fetchRepos()
   }
