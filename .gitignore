@@ -1,4 +1,5 @@
 my-todos.txt
+.DS_Store
 node_modules/
 backend/log/
 backend/tmp/
