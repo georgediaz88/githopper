@@ -79,6 +79,7 @@ GEM
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     multipart-post (2.0.0)
+    newrelic_rpm (3.17.1.326)
     nio4r (1.2.1)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -165,6 +166,7 @@ PLATFORMS
 DEPENDENCIES
   jwt (~> 1.5.4)
   listen (~> 3.0.5)
+  newrelic_rpm (~> 3.17.1)
   octokit
   pg (~> 0.18.4)
   pry-byebug
@@ -178,4 +180,4 @@ DEPENDENCIES
   virtus
 
 BUNDLED WITH
-   1.12.5
+   1.13.6
