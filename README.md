@@ -5,16 +5,17 @@ The application is split into two apps that are brought up as one through our gr
 
 ## Frontend App
 This is a rich frontend app utilizing:
-  - React (15.1)
-  - React Router
-  - Redux (state management),
-  - Firebase 3.x for Github OAuth Authentication
-  - JSON web token used for current user session
-  - React Flexbox Grid
-  - React Icons
-  - Webpack
-  - Sass
-  - ScrollReveal
+  * React (15.1)
+  * React Router
+  * Redux (state management),
+  * Firebase 3.x for Github OAuth Authentication
+  * JSON web token used for current user session
+  * React Flexbox Grid
+  * React Icons
+  * Webpack
+  * Sass
+  * ScrollReveal
+  * animate.css
 
 ## Backend App
 This is the API written in Rails 5.
