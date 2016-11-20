@@ -7,7 +7,6 @@ import FaMedium from 'react-icons/lib/fa/medium'
 class Footer extends React.Component {
 
   render(){
-    const { repos, auth, orgs, onRepoPreferenceToggled, toggledOrg, toggleOrg, enableAll, disableAll, status } = this.props
     return(
       <footer className='footer'>
         <Row className='animated fadeInUp'>
