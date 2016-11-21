@@ -18,5 +18,3 @@ ADD . $APP_HOME
 RUN npm run build
 
 CMD ["npm", "start"]
-# Heroku will expose a $PORT for us
-# EXPOSE 80

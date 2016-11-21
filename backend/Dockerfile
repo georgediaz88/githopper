@@ -26,5 +26,3 @@ ADD . $APP_HOME
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 CMD bundle exec puma -C config/puma.rb
-# CMD ["rails", "s", "-p", "$PORT"]
-# EXPOSE 3050
