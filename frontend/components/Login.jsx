@@ -16,7 +16,7 @@ const Login = ({signInWithGithub}) => {
         <Row className='flex-parent animated fadeInUp' center='xs'>
           <Col xs={8} sm={6} md={4} className='flex-child'>
             <div className='login-title'>Githopper</div>
-            <p className='login-msg'>No more forgetting what you did yesterday. See your weekly Github activity.</p>
+            <p className='login-msg'>No more forgetting what you did at scrum yesterday. See your weekly Github activity.</p>
             <RaisedButton
               label = 'Login with Github'
               onClick={signInWithGithub}
