@@ -13,21 +13,28 @@ const accessTokenKey = 'githopper.accessToken'
 
 function authenticate(provider) {
   return (dispatch, getState) => {
-    firebase.auth().signInWithPopup(provider).then((result)=> {
-      localStorage.setItem(accessTokenKey, result.credential.accessToken)
+    firebase.auth().signInWithRedirect(provider)
+  }
+}
 
-      firebase.auth().currentUser.getToken(true).then((idToken)=>{
-        axios.defaults.headers.common['X-Firebase-Token'] = idToken
-        axios.post(`${ROOT_URL}/github_users`, {
-          email: result.user.providerData[0].email,
-          name: result.user.providerData[0].displayName,
-          uid: result.user.uid,
-          access_token: result.credential.accessToken
-        }).then(()=>{
-          dispatch(login({uid: result.user.uid, photoURL: result.user.photoURL}))
-          history.replace('/')
+export function firebaseStart(){
+  return (dispatch, getState) => {
+    firebase.auth().getRedirectResult().then((result)=> {
+      if(result.credential){
+        localStorage.setItem(accessTokenKey, result.credential.accessToken)
+        firebase.auth().currentUser.getToken(true).then((idToken)=>{
+          axios.defaults.headers.common['X-Firebase-Token'] = idToken
+          axios.post(`${ROOT_URL}/github_users`, {
+            email: result.user.providerData[0].email,
+            name: result.user.providerData[0].displayName,
+            uid: result.user.uid,
+            access_token: result.credential.accessToken
+          }).then(()=>{
+            dispatch(login({uid: result.user.uid, photoURL: result.user.photoURL}))
+            history.replace('/')
+          })
         })
-      })
+      }
     })
   }
 }

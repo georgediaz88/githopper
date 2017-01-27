@@ -47,6 +47,8 @@ function handleUpdate(){
   }
 }
 
+store.dispatch(authActions.firebaseStart())
+
 ReactDOM.render((
   <Provider store={store}>
     { /* Tell the Router to use our enhanced history */ }
@@ -55,4 +57,3 @@ ReactDOM.render((
     </Router>
   </Provider>
 ), document.getElementById('root'))
-
